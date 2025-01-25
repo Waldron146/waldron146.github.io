@@ -1,0 +1,203 @@
+/* Base Styles */
+body {
+    background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg');
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 3em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header p {
+    color: white;
+    margin: 10px 0 20px;
+    font-size: 1.2em;
+    animation: fadeIn 1.5s ease-in 0.5s forwards;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.animated-header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list li {
+    position: relative; /* Positioning for the pseudo-element */
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.nav-list li:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Make the entire area clickable */
+    padding: 10px 15px; /* Add some padding for better click area */
+    transition: color 0.3s; /* Transition for text color */
+}
+
+.nav-list li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Sections */
+.section {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    background: #0073b1;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 4px 4px 20px rgba(1, 250, 43, 0.5); /* Shadow effect */
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project a {
+    color: #FFD700; /* Gold color for links */
+    text-decoration: none;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Light shadow */
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px;
+}
+
+#contact h2 {
+    margin-top: 0;
+    color: rgb(3, 1, 1);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: #0077B5;
+    margin: 0 15px;
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+#contact a:hover {
+    color: #FFD700; /* Gold color on hover */
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.fab, .fas {
+    font-size: 2em; /* Adjust icon size */
+}
+
+footer {
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0077B5; /* LinkedIn blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#scrollToTop:hover {
+    background-color: #005582; /* Darker LinkedIn color on hover */
+}
+
